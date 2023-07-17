@@ -39,6 +39,12 @@ button {
   pointer-events: none;
   opacity: 0%;
   text-align: center;
+
+  /* animate */
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-name: slideout;
+  animation-direction: normal;
 }
 
 .popup-modal p {
@@ -59,7 +65,9 @@ button {
 
   /* animate */
   animation-duration: 1s;
+  animation-iteration-count: 1;
   animation-name: slidein;
+  animation-direction: normal;
 }
 
 @keyframes slidein {
@@ -67,9 +75,18 @@ button {
     opacity: 0%;
     top: 0%;
   }
-
   to {
-    margin-bottom: 30%;
+    opacity: 100%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    opacity: 100%;
+  }
+  to {
+    top: 0%;
+    opacity: 0%;
   }
 }
 
