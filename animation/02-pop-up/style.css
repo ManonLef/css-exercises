@@ -40,8 +40,9 @@ button {
   opacity: 0%;
   text-align: center;
 }
+
 .popup-modal p {
-  margin-bottom: 24px
+  margin-bottom: 24px;
 }
 
 .backdrop {
@@ -55,9 +56,23 @@ button {
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+
+  /* animate */
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0%;
+    top: 0%;
+  }
+
+  to {
+    margin-bottom: 30%;
+  }
 }
 
 .backdrop.show {
   opacity: 30%;
 }
-
